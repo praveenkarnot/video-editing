@@ -1,3 +1,11 @@
+ai_video_studio.home:
+  path: '/ai-video-studio/home'
+  defaults:
+    _controller: '\Drupal\ai_video_studio\Controller\HomeController::page'
+    _title: 'AI Video Studio'
+  requirements:
+    _permission: 'access content'
+
 ai_video_studio.studio:
   path: '/ai-video-studio'
   defaults:

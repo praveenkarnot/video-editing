@@ -4,6 +4,7 @@ This repository contains a Drupal project scaffold and a custom module that adds
 
 ## Features
 
+- A polished front page with animated workflow visuals.
 - Upload a source video through Drupal's managed file system.
 - Choose basic edit options: trim, format, overlay text, mute audio, and captions.
 - Describe a new AI-generated video with style, duration, and resolution controls.
@@ -27,6 +28,8 @@ This repository contains a Drupal project scaffold and a custom module that adds
 
 4. Give users the `Use AI Video Studio` permission.
 5. Visit `/ai-video-studio`.
+
+When the module is installed, it sets Drupal's front page to `/ai-video-studio/home`.
 
 ## Next Integration Step
 

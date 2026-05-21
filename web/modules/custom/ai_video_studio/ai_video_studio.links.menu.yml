@@ -1,5 +1,12 @@
-ai_video_studio.studio:
+ai_video_studio.home:
   title: 'AI Video Studio'
+  description: 'Explore the AI video editing experience.'
+  route_name: ai_video_studio.home
+  menu_name: main
+  weight: 10
+
+ai_video_studio.studio:
+  title: 'Create Video'
   description: 'Upload, edit, and create videos with AI.'
   route_name: ai_video_studio.studio
   menu_name: main

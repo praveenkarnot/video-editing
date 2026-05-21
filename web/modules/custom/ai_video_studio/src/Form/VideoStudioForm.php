@@ -44,17 +44,25 @@ final class VideoStudioForm extends FormBase {
     $form['intro'] = [
       '#type' => 'container',
       '#attributes' => ['class' => ['ai-video-studio__header']],
+      'eyebrow' => [
+        '#markup' => '<div class="ai-video-studio__eyebrow">Creative workspace</div>',
+      ],
       'title' => [
         '#markup' => '<h2>Create a new video with AI</h2>',
       ],
       'copy' => [
-        '#markup' => '<p>Upload a source video, choose edits, and describe the new version you want to create.</p>',
+        '#markup' => '<p>Upload a source video, choose edits, and describe the new version you want. The studio turns your brief into a provider-ready generation job.</p>',
+      ],
+      'badges' => [
+        '#markup' => '<div class="ai-video-studio__badges"><span>Smart captions</span><span>Social formats</span><span>AI prompt</span></div>',
       ],
     ];
 
     $form['source'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Source video'),
+      '#attributes' => ['class' => ['ai-video-studio__panel', 'ai-video-studio__upload-panel']],
+      '#description' => $this->t('Drop in the raw footage you want to transform.'),
     ];
 
     $form['source']['video'] = [
@@ -71,7 +79,7 @@ final class VideoStudioForm extends FormBase {
     $form['editing'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Edit options'),
-      '#attributes' => ['class' => ['ai-video-studio__grid']],
+      '#attributes' => ['class' => ['ai-video-studio__grid', 'ai-video-studio__panel']],
     ];
 
     $form['editing']['trim_start'] = [
@@ -123,6 +131,7 @@ final class VideoStudioForm extends FormBase {
     $form['generation'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('AI generation'),
+      '#attributes' => ['class' => ['ai-video-studio__panel', 'ai-video-studio__generation-panel']],
     ];
 
     $form['generation']['prompt'] = [

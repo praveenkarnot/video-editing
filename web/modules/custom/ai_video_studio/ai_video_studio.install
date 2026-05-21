@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Install hooks for AI Video Studio.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function ai_video_studio_install(): void {
+  \Drupal::configFactory()
+    ->getEditable('system.site')
+    ->set('page.front', '/ai-video-studio/home')
+    ->save();
+}

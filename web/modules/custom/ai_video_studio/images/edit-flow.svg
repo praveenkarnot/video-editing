@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 190" role="img" aria-labelledby="title">
+  <title id="title">Animated edit step</title>
+  <rect width="280" height="190" rx="20" fill="#f5f7fb"/>
+  <rect x="42" y="42" width="196" height="76" rx="16" fill="#142033"/>
+  <circle cx="90" cy="80" r="18" fill="#f4b942"/>
+  <rect x="124" y="68" width="70" height="12" rx="6" fill="#dfe8ed"/>
+  <rect x="124" y="90" width="46" height="12" rx="6" fill="#8bb5c6"/>
+  <g>
+    <rect x="48" y="138" width="52" height="20" rx="7" fill="#16a085"/>
+    <rect x="108" y="138" width="82" height="20" rx="7" fill="#f4b942"/>
+    <rect x="198" y="138" width="34" height="20" rx="7" fill="#4f6f8f"/>
+    <animateTransform attributeName="transform" type="translate" values="-10 0;10 0;-10 0" dur="3s" repeatCount="indefinite"/>
+  </g>
+  <line x1="150" y1="128" x2="150" y2="168" stroke="#101827" stroke-width="4" stroke-linecap="round">
+    <animate attributeName="x1" values="112;186;112" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="112;186;112" dur="3s" repeatCount="indefinite"/>
+  </line>
+</svg>
