@@ -1,0 +1,7 @@
+ai_video_studio.studio:
+  path: '/ai-video-studio'
+  defaults:
+    _form: '\Drupal\ai_video_studio\Form\VideoStudioForm'
+    _title: 'AI Video Studio'
+  requirements:
+    _permission: 'use ai video studio'

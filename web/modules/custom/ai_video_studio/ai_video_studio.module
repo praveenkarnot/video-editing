@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Hooks for the AI Video Studio module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function ai_video_studio_theme(): array {
+  return [
+    'ai_video_studio_preview' => [
+      'variables' => [
+        'video_url' => NULL,
+        'job' => NULL,
+      ],
+    ],
+  ];
+}

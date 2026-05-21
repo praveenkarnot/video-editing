@@ -1,0 +1,6 @@
+services:
+  ai_video_studio.generator:
+    class: Drupal\ai_video_studio\Service\AiVideoGenerator
+    arguments:
+      - '@file_url_generator'
+      - '@datetime.time'

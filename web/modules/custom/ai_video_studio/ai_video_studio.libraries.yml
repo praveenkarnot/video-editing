@@ -1,0 +1,10 @@
+studio:
+  version: 1.x
+  css:
+    theme:
+      css/ai-video-studio.css: {}
+  js:
+    js/ai-video-studio.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

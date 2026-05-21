@@ -1,0 +1,46 @@
+.ai-video-studio {
+  max-width: 1040px;
+}
+
+.ai-video-studio__header {
+  margin-block-end: 1.5rem;
+}
+
+.ai-video-studio__header h2 {
+  margin-block: 0 0.35rem;
+}
+
+.ai-video-studio fieldset {
+  border: 1px solid #d7dde5;
+  border-radius: 8px;
+  margin-block: 0 1rem;
+  padding: 1rem;
+}
+
+.ai-video-studio legend {
+  font-weight: 700;
+}
+
+.ai-video-studio__grid .fieldset-wrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.ai-video-studio input[type='text'],
+.ai-video-studio input[type='number'],
+.ai-video-studio select,
+.ai-video-studio textarea {
+  max-width: 100%;
+}
+
+.ai-video-studio__result {
+  border-inline-start: 4px solid #277c5f;
+  background: #f1fbf7;
+  margin-block-start: 1rem;
+  padding: 1rem;
+}
+
+.ai-video-studio__result h3 {
+  margin-block-start: 0;
+}

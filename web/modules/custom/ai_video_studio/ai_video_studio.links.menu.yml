@@ -1,0 +1,6 @@
+ai_video_studio.studio:
+  title: 'AI Video Studio'
+  description: 'Upload, edit, and create videos with AI.'
+  route_name: ai_video_studio.studio
+  menu_name: main
+  weight: 20
