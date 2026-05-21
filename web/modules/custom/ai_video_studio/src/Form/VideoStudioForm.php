@@ -40,10 +40,14 @@ final class VideoStudioForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state): array {
     $form['#attached']['library'][] = 'ai_video_studio/studio';
     $form['#attributes']['class'][] = 'ai-video-studio';
+    $assetBase = base_path() . \Drupal::service('extension.list.module')->getPath('ai_video_studio') . '/images/';
 
     $form['intro'] = [
       '#type' => 'container',
       '#attributes' => ['class' => ['ai-video-studio__header']],
+      'logo' => [
+        '#markup' => '<div class="avs-brand avs-brand--dark"><img src="' . $assetBase . 'ai-video-logo.svg" alt="AI Video Studio logo"><span>AI Video Studio</span></div>',
+      ],
       'eyebrow' => [
         '#markup' => '<div class="ai-video-studio__eyebrow">Creative workspace</div>',
       ],

@@ -42,6 +42,9 @@ final class HomeController extends ControllerBase {
         'content' => [
           '#type' => 'container',
           '#attributes' => ['class' => ['avs-home__hero-content']],
+          'logo' => [
+            '#markup' => '<div class="avs-brand"><img src="' . $assetBase . 'ai-video-logo.svg" alt="AI Video Studio logo"><span>AI Video Studio</span></div>',
+          ],
           'eyebrow' => ['#markup' => '<div class="avs-home__eyebrow">Upload. Edit. Generate.</div>'],
           'title' => ['#markup' => '<h1>AI Video Studio</h1>'],
           'copy' => ['#markup' => '<p>Turn raw clips into polished videos with guided edits, smart captions, format presets, and AI-generated creative direction.</p>'],

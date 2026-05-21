@@ -9,6 +9,29 @@
   --avs-panel: #ffffff;
 }
 
+/* Hide default Drupal theme clutter for the AI video product experience. */
+.feed-icons,
+.feed-icon,
+a[href$="/rss.xml"],
+a[href*="/rss.xml"],
+.block-search,
+.search-block-form,
+form[action*="/search"],
+.region-sidebar-first,
+.region-sidebar-second,
+.sidebar,
+.layout-sidebar-first,
+.layout-sidebar-second,
+.site-sidebar {
+  display: none !important;
+}
+
+.layout-main-wrapper,
+.main-content,
+.region-content {
+  max-width: none;
+}
+
 .avs-home,
 .ai-video-studio {
   color: var(--avs-ink);
@@ -43,6 +66,31 @@
   letter-spacing: 0;
   margin-block-end: 0.7rem;
   text-transform: uppercase;
+}
+
+.avs-brand {
+  align-items: center;
+  color: var(--avs-ink);
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 900;
+  gap: 0.75rem;
+  letter-spacing: 0;
+  margin-block-end: 1.4rem;
+}
+
+.avs-brand img {
+  display: block;
+  height: 52px;
+  width: 52px;
+}
+
+.avs-brand--dark {
+  color: #fff;
+}
+
+.avs-brand--dark img {
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.28));
 }
 
 .avs-home h1 {

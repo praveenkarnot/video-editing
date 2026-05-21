@@ -18,3 +18,10 @@ function ai_video_studio_theme(): array {
     ],
   ];
 }
+
+/**
+ * Implements hook_page_attachments().
+ */
+function ai_video_studio_page_attachments(array &$attachments): void {
+  $attachments['#attached']['library'][] = 'ai_video_studio/studio';
+}
