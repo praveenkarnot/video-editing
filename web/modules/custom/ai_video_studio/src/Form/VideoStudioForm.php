@@ -80,6 +80,17 @@ final class VideoStudioForm extends FormBase {
       '#required' => FALSE,
     ];
 
+    $form['source']['upload_ui'] = [
+      '#markup' => '<div class="avs-upload-enhancer"><div class="avs-upload-icon"></div><strong>Drag and drop your video here</strong><span>or use the upload control above</span><video class="avs-video-preview" controls hidden></video><div class="avs-progress" aria-hidden="true"><i></i></div></div>',
+    ];
+
+    $form['status'] = [
+      '#type' => 'container',
+      '#attributes' => ['class' => ['ai-video-studio__panel', 'avs-status-panel']],
+      'title' => ['#markup' => '<h3>AI processing status</h3>'],
+      'body' => ['#markup' => '<div class="avs-status-list"><span>Upload ready</span><span>Prompt waiting</span><span>Render queue idle</span></div>'],
+    ];
+
     $form['editing'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Edit options'),
@@ -189,6 +200,28 @@ final class VideoStudioForm extends FormBase {
       '#button_type' => 'primary',
     ];
 
+    $form['actions']['generate'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Generate AI Video'),
+      '#submit' => ['::submitForm'],
+      '#attributes' => ['class' => ['avs-action-secondary']],
+    ];
+
+    $form['actions']['draft'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Save Draft'),
+      '#limit_validation_errors' => [],
+      '#submit' => ['::saveDraft'],
+      '#attributes' => ['class' => ['avs-action-muted']],
+    ];
+
+    $form['actions']['export'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Export Video'),
+      '#submit' => ['::submitForm'],
+      '#attributes' => ['class' => ['avs-action-gold']],
+    ];
+
     if ($job = $form_state->get('ai_video_job')) {
       $form['result'] = [
         '#type' => 'container',
@@ -244,6 +277,14 @@ final class VideoStudioForm extends FormBase {
     $form_state->set('ai_video_job', $job);
     $form_state->setRebuild(TRUE);
     $this->messenger()->addStatus($this->t('Your AI video request has been queued.'));
+  }
+
+  /**
+   * Saves the current form as a draft placeholder.
+   */
+  public function saveDraft(array &$form, FormStateInterface $form_state): void {
+    $this->messenger()->addStatus($this->t('Draft saved. You can continue editing later.'));
+    $form_state->setRebuild(TRUE);
   }
 
   private function loadUploadedVideo(FormStateInterface $form_state): ?FileInterface {

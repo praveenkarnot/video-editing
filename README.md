@@ -8,6 +8,9 @@ This repository contains a Drupal project scaffold and a custom module that adds
 - Upload a source video through Drupal's managed file system.
 - Choose basic edit options: trim, format, overlay text, mute audio, and captions.
 - Describe a new AI-generated video with style, duration, and resolution controls.
+- AI editor dashboard mock workflow for trimming, subtitles, voiceovers, music, transitions, and short clip generation.
+- Designed Contact, About, Pricing, Features, Privacy Policy, and Terms & Conditions pages.
+- Dark/light mode toggle, testimonials, client logos, demo video ideas, newsletter section, and live chat entry point.
 - Queue a normalized AI video job payload through `AiVideoGenerator`, ready to connect to a real provider or queue worker.
 
 ## Install
@@ -30,6 +33,18 @@ This repository contains a Drupal project scaffold and a custom module that adds
 5. Visit `/ai-video-studio`.
 
 When the module is installed, it sets Drupal's front page to `/ai-video-studio/home`.
+
+## Pages
+
+- `/ai-video-studio/home`
+- `/ai-video-studio`
+- `/ai-video-studio/dashboard`
+- `/features`
+- `/pricing`
+- `/about-us`
+- `/contact-us`
+- `/privacy-policy`
+- `/terms-conditions`
 
 ## Next Integration Step
 

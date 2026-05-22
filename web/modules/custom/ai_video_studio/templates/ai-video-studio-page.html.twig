@@ -1,0 +1,16 @@
+<article class="avs-page avs-reveal">
+  <header class="avs-page__header">
+    {% if eyebrow %}
+      <div class="avs-home__eyebrow">{{ eyebrow }}</div>
+    {% endif %}
+    {% if title %}
+      <h1>{{ title }}</h1>
+    {% endif %}
+    {% if intro %}
+      <p>{{ intro }}</p>
+    {% endif %}
+  </header>
+  <div class="avs-page__body">
+    {{ content }}
+  </div>
+</article>

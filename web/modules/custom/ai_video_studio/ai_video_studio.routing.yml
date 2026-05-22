@@ -13,3 +13,59 @@ ai_video_studio.studio:
     _title: 'AI Video Studio'
   requirements:
     _permission: 'use ai video studio'
+
+ai_video_studio.dashboard:
+  path: '/ai-video-studio/dashboard'
+  defaults:
+    _controller: '\Drupal\ai_video_studio\Controller\SitePagesController::dashboard'
+    _title: 'AI Video Editor Dashboard'
+  requirements:
+    _permission: 'use ai video studio'
+
+ai_video_studio.contact:
+  path: '/contact-us'
+  defaults:
+    _form: '\Drupal\ai_video_studio\Form\ContactForm'
+    _title: 'Contact Us'
+  requirements:
+    _permission: 'access content'
+
+ai_video_studio.about:
+  path: '/about-us'
+  defaults:
+    _controller: '\Drupal\ai_video_studio\Controller\SitePagesController::about'
+    _title: 'About Us'
+  requirements:
+    _permission: 'access content'
+
+ai_video_studio.pricing:
+  path: '/pricing'
+  defaults:
+    _controller: '\Drupal\ai_video_studio\Controller\SitePagesController::pricing'
+    _title: 'Pricing'
+  requirements:
+    _permission: 'access content'
+
+ai_video_studio.features:
+  path: '/features'
+  defaults:
+    _controller: '\Drupal\ai_video_studio\Controller\SitePagesController::features'
+    _title: 'Features'
+  requirements:
+    _permission: 'access content'
+
+ai_video_studio.privacy:
+  path: '/privacy-policy'
+  defaults:
+    _controller: '\Drupal\ai_video_studio\Controller\SitePagesController::privacy'
+    _title: 'Privacy Policy'
+  requirements:
+    _permission: 'access content'
+
+ai_video_studio.terms:
+  path: '/terms-conditions'
+  defaults:
+    _controller: '\Drupal\ai_video_studio\Controller\SitePagesController::terms'
+    _title: 'Terms & Conditions'
+  requirements:
+    _permission: 'access content'

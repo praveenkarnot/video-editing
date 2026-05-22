@@ -11,3 +11,34 @@ ai_video_studio.studio:
   route_name: ai_video_studio.studio
   menu_name: main
   weight: 20
+
+ai_video_studio.dashboard:
+  title: 'Editor'
+  description: 'Edit uploaded videos in the AI dashboard.'
+  route_name: ai_video_studio.dashboard
+  menu_name: main
+  weight: 30
+
+ai_video_studio.features:
+  title: 'Features'
+  route_name: ai_video_studio.features
+  menu_name: main
+  weight: 40
+
+ai_video_studio.pricing:
+  title: 'Pricing'
+  route_name: ai_video_studio.pricing
+  menu_name: main
+  weight: 50
+
+ai_video_studio.about:
+  title: 'About'
+  route_name: ai_video_studio.about
+  menu_name: main
+  weight: 60
+
+ai_video_studio.contact:
+  title: 'Contact'
+  route_name: ai_video_studio.contact
+  menu_name: main
+  weight: 70

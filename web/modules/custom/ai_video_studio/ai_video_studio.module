@@ -16,6 +16,15 @@ function ai_video_studio_theme(): array {
         'job' => NULL,
       ],
     ],
+    'ai_video_studio_page' => [
+      'variables' => [
+        'eyebrow' => NULL,
+        'title' => NULL,
+        'intro' => NULL,
+        'content' => NULL,
+      ],
+      'template' => 'ai-video-studio-page',
+    ],
   ];
 }
 
