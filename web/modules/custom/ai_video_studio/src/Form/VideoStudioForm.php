@@ -14,9 +14,11 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 final class VideoStudioForm extends FormBase {
 
-  public function __construct(
-    private readonly AiVideoGenerator $aiVideoGenerator,
-  ) {}
+  private ?AiVideoGenerator $aiVideoGenerator = NULL;
+
+  public function __construct(?AiVideoGenerator $aiVideoGenerator = NULL) {
+    $this->aiVideoGenerator = $aiVideoGenerator;
+  }
 
   /**
    * {@inheritdoc}
@@ -261,7 +263,7 @@ final class VideoStudioForm extends FormBase {
       $sourceVideo->save();
     }
 
-    $job = $this->aiVideoGenerator->createJob($sourceVideo, [
+    $job = $this->aiVideoGenerator()->createJob($sourceVideo, [
       'trim_start' => $form_state->getValue('trim_start'),
       'trim_end' => $form_state->getValue('trim_end'),
       'aspect_ratio' => $form_state->getValue('aspect_ratio'),
@@ -295,6 +297,14 @@ final class VideoStudioForm extends FormBase {
 
     $file = File::load($fileIds[0]);
     return $file instanceof FileInterface ? $file : NULL;
+  }
+
+  private function aiVideoGenerator(): AiVideoGenerator {
+    if (!$this->aiVideoGenerator) {
+      $this->aiVideoGenerator = \Drupal::service('ai_video_studio.generator');
+    }
+
+    return $this->aiVideoGenerator;
   }
 
 }
