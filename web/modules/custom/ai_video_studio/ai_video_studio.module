@@ -34,3 +34,23 @@ function ai_video_studio_theme(): array {
 function ai_video_studio_page_attachments(array &$attachments): void {
   $attachments['#attached']['library'][] = 'ai_video_studio/studio';
 }
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function ai_video_studio_preprocess_page(array &$variables): void {
+  $variables['page']['footer']['ai_video_studio_footer'] = [
+    '#type' => 'container',
+    '#weight' => -100,
+    '#attributes' => ['class' => ['avs-footer']],
+    'brand' => [
+      '#markup' => '<div class="avs-footer__brand"><strong>AI Video Studio</strong><span>Premium AI video editing for Drupal.</span></div>',
+    ],
+    'social' => [
+      '#markup' => '<nav class="avs-footer__social" aria-label="Social media"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">x</a><a href="#" aria-label="YouTube">yt</a></nav>',
+    ],
+    'copyright' => [
+      '#markup' => '<div class="avs-footer__copy">© 2026 All Rights Reserved.</div>',
+    ],
+  ];
+}
